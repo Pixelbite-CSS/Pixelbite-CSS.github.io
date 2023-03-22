@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Docs | PixelbiteCSS</title>
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css">
+</head>
+<body onload="startupnow()">
+<div class="w-100% bg-white100 dark:bg-black20 dark:c-white100">
+    <div class="w-100% flex">
+        <div class="auto-width flexColumn p-22px g-12px">
+            <div class="flex flexLeft">
+                <button onclick="href('./')" class="buttonOutline b-none flexCenter flexMiddle fw-700 fs-32px">
+                    PIXELBITE
+                </button>
+            </div>
+            <div class="w-100% auto-menu flexRow flexSpaceBetween">
+                <button class="auto-menu-button bg-transparent b-1px-solid-primary"
+                        onclick="toggleElement('toggle-menu')">
+                    <svg class="fill-white10 dark:fill-white100 h-24px" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 448 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </button>
+                <div class="toggle-menu flexRow g-12px foreach:b-none foreach:c-white0 foreach:dark:c-white100">
+                    <button onclick="href('./')" class="buttonHoverDark buttonOutline">
+                        Home
+                    </button>
+                    <button onclick="href('./docs.html')" class="buttonHoverDark buttonOutline">
+                        Docs
+                    </button>
+                    <button onclick="href('./about.html')" class="buttonHoverDark buttonOutline">
+                        About
+                    </button>
+                </div>
+                <button class="toggle-menu buttonHoverDark flexCenter flexMiddle br-50px w-42px h-42px p-0"
+                        onclick="changeThemeMode()">
+                    <svg class="fill-white100 h-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M256 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C352 78.8 273.2 0 176 0S0 78.8 0 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0C66.5 324.9 86.4 352.1 96 384H256zM176 512c44.2 0 80-35.8 80-80V416H96v16c0 44.2 35.8 80 80 80zM96 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="w-100% p-32px-0">
+        <div class="auto-width auto-size flexRow flexCenter flexAlignItems-flex_start flexWrap c-white10 dark:c-white100 g-32px">
+            <div class="w-200px foreach:m-0 foreach:fw-400 foreach:td-none flexColumn flexLeft sticky maxH-100vh ovy-auto top-12px">
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M32 0C49.7 0 64 14.3 64 32V48l69-17.2c38.1-9.5 78.3-5.1 113.5 12.5c46.3 23.2 100.8 23.2 147.1 0l9.6-4.8C423.8 28.1 448 43.1 448 66.1V345.8c0 13.3-8.3 25.3-20.8 30l-34.7 13c-46.2 17.3-97.6 14.6-141.7-7.4c-37.9-19-81.4-23.7-122.5-13.4L64 384v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V400 334 64 32C0 14.3 14.3 0 32 0zM64 187.1l64-13.9v65.5L64 252.6V318l48.8-12.2c5.1-1.3 10.1-2.4 15.2-3.3V238.7l38.9-8.4c8.3-1.8 16.7-2.5 25.1-2.1l0-64c13.6 .4 27.2 2.6 40.4 6.4l23.6 6.9v66.7l-41.7-12.3c-7.3-2.1-14.8-3.4-22.3-3.8v71.4c21.8 1.9 43.3 6.7 64 14.4V244.2l22.7 6.7c13.5 4 27.3 6.4 41.3 7.4V194c-7.8-.8-15.6-2.3-23.2-4.5l-40.8-12v-62c-13-3.8-25.8-8.8-38.2-15c-8.2-4.1-16.9-7-25.8-8.8v72.4c-13-.4-26 .8-38.7 3.6L128 173.2V98L64 114v73.1zM320 335.7c16.8 1.5 33.9-.7 50-6.8l14-5.2V251.9l-7.9 1.8c-18.4 4.3-37.3 5.7-56.1 4.5v77.4zm64-149.4V115.4c-20.9 6.1-42.4 9.1-64 9.1V194c13.9 1.4 28 .5 41.7-2.6l22.3-5.2z"/>
+                    </svg>
+                    Introduction
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#initialization">1.1. Initialization</a>
+                    <a href="#how-it-works">1.2. How it works?</a>
+                    <a href="#templates">1.3. Templates</a>
+                </div>
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M186 32c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V172.9l122-70.4c15.3-8.8 34.9-3.6 43.7 11.7l16 27.7c8.8 15.3 3.6 34.9-11.7 43.7L330 256l122 70.4c15.3 8.8 20.5 28.4 11.7 43.7l-16 27.7c-8.8 15.3-28.4 20.6-43.7 11.7L282 339.1V480c0 17.7-14.3 32-32 32H218c-17.7 0-32-14.3-32-32V339.1L64 409.6c-15.3 8.8-34.9 3.6-43.7-11.7l-16-27.7C-4.5 354.8 .7 335.3 16 326.4L138 256 16 185.6C.7 176.7-4.5 157.2 4.3 141.9l16-27.7C29.1 98.8 48.7 93.6 64 102.4l122 70.4V32z"/>
+                    </svg>
+                    Classes
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#class-list">2.1. Class list</a>
+                    <a href="#custom-classes">2.2. Custom classes</a>
+                </div>
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M339.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L568.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S517.7-4.4 499.1 9.6L262.4 187.2c-24 18-38.2 46.1-38.4 76.1L339.3 367.1zm-19.6 25.4l-116-104.4C143.9 290.3 96 339.6 96 400c0 3.9 .2 7.8 .6 11.6C98.4 429.1 86.4 448 68.8 448H64c-17.7 0-32 14.3-32 32s14.3 32 32 32H208c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/>
+                    </svg>
+                    Custom elements
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#onclick-href">3.1. Onclick href</a>
+                    <a href="#toggle-element">3.2. Toggle element</a>
+                    <a href="#slideshow">3.3. Slideshow</a>
+                    <a href="#searchbar">3.4. Searchbar</a>
+                    <a href="#slider">3.5. Slider</a>
+                    <a href="#float-input">3.6. Float input</a>
+                    <a href="#close-x">3.7. Close x</a>
+                    <a href="#loader">3.8. Loader</a>
+                </div>
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/>
+                    </svg>
+                    Custom features
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#dark-moder">4.1. Dark mode</a>
+                    <a href="#foreach">4.2. Foreach</a>
+                    <a href="#dummy-text">4.1. Dummy text</a>
+                </div>
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M0 64C0 28.7 28.7 0 64 0H352c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zM160 352c0-17.7 14.3-32 32-32V304c0-44.2 35.8-80 80-80H416c17.7 0 32-14.3 32-32V160 69.5c37.3 13.2 64 48.7 64 90.5v32c0 53-43 96-96 96H272c-8.8 0-16 7.2-16 16v16c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V352z"/>
+                    </svg>
+                    Customization
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#custom-colors">5.1. Custom colors</a>
+                    <a href="#custom-variables">5.2. Custom variables</a>
+                    <a href="#alias-class">5.3. Alias class</a>
+                    <a href="#update-delay">5.4. Update delay</a>
+                </div>
+                <a class="flex g-6px" href="#">
+                    Back to top
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="w-600px flexLeft flexColumn g-12px">
+                <h1>1. Introduction</h1>
+                <div class="paragraph">
+                    PixelbiteCSS works by scanning HTML file and looks around for classes and replaces its class name
+                    into a stylesheet text.
+                </div>
+                <h2 id="initialization">1.1. Initialization</h2>
+                <div class="paragraph">
+                    We will start by implementing <b>meta viewport</b>, <b>CSS library</b> and <b>JS library</b> into
+                    our file/project.
+                </div>
+                <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css&quot;&gt;
+&lt;script src=&quot;https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <div class="paragraph">
+                    Our project should now look like this:
+                </div>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    <code class="c-info">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code>
+    &lt;title&gt;Example&lt;/title&gt;
+    <code class="c-info">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css&quot;&gt;</code>
+&lt;/head&gt;
+&lt;body&gt;
+<code class="c-info">&lt;script src=&quot;https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js&quot;&gt;&lt;/script&gt;</code>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <h2 id="how-it-works">1.2. How it works</h2>
+                <div class="paragraph">
+                    Main <b>Javascript</b> scans for class names inside an element. If a class name matches with a class
+                    list, it will automatically add a specific value or stylesheet for that specific name.
+                </div>
+                <div class="paragraph">
+                    Classes can be implemented by writing a <i>class name</i> (for more context, see <a
+                        href="#class-list">class list</a>) and add a value you would like to have for that element.
+                </div>
+                <pre><code>&#60;h3 class="<code
+                        class="c-info">bg-#ff0000</code>"&#62;Hello world&#60;/h3&#62;</code></pre>
+                <div class="paragraph">
+                    This means, that the class <b><code>bg-#ff0000</code></b> will have a red background color.
+                </div>
+                <div class="w-100% p-10px foreach:m-0 b-1px-solid-primary br-4px">
+                    <h3 class="bg-#ff0000">Hello world</h3>
+                </div>
+                <div class="paragraph">
+                    You can use this for pretty much every class that is inside of a <b>PixelbiteCSS</b> library (for
+                    more context, see <a href="#class-list">class list</a>).
+                </div>
+                <h2 id="templates">1.3. Templates</h2>
+                <div class="paragraph">
+                    If you are looking for a quick look-up, how <b>PixelbiteCSS</b> works or if you are lazy to program
+                    a functional website. You can look up into our templates. Feel free to copy and use.
+                </div>
+                <div class="flexRow auto-size flexCenter flexWrap g-10px">
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/gallery.png"/>
+                        <div>
+                            Gallery -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/gallery/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/gallery">code</a>
+                        </div>
+                    </div>
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/blog.png"/>
+                        <div>
+                            Blog -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/blog/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/blog">code</a>
+                        </div>
+                    </div>
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/post.png"/>
+                        <div>
+                            Post -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/post/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/post">code</a>
+                        </div>
+                    </div>
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/dashboard.png"/>
+                        <div>
+                            Dashboard -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/dashboard/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/dashboard">code</a>
+                        </div>
+                    </div>
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/login.png"/>
+                        <div>
+                            Login -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/login/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/login">code</a>
+                        </div>
+                    </div>
+                    <div class="customModalTemplate">
+                        <img class="w-100% br-4px ar-1.5/1" src="assets/search.png"/>
+                        <div>
+                            Search -
+                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/search/">demo</a> -
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/search">code</a>
+                        </div>
+                    </div>
+                    <!--                    <div class="customModalTemplate">-->
+                    <!--                        <img class="w-100% br-4px ar-1.5/1" src="assets/cheatsheet.png"/>-->
+                    <!--                        <div>-->
+                    <!--                            Cheatsheet - -->
+                    <!--                            <a href="https://pixelbite-css.github.io/pixelbite-css/examples/chaetsheet/">demo</a> - -->
+                    <!--                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/chaetsheep">code</a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </div>
+                <h1>2. Classes</h1>
+                <div class="paragraph">
+                    Classes can be used simply by implementing a class into a <b>HTML class</b> tag, for example
+                    <b><code>class="bg-#ff0000"</code></b>.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>[class_shortcut]-[params]-...</code>
+                </div>
+                <pre><code>&#60;h3 class="<code class="c-info">border-2px-solid-#ff0000</code>"&#62;Hello world&#60;/h3&#62;</code></pre>
+                <div class="workingCode">
+                    <h3 class="border-2px-solid-#ff0000">Hello world</h3>
+                </div>
+                <h2 id="class-list">2.1. Class list</h2>
+                <div class="paragraph">
+                    Here you can see all the classes you can use.
+                </div>
+                <table id="class-list-table" class="w-100% foreach:p-2px-3px">
+                    <tr>
+                        <td><b>Shortcut</b></td>
+                        <td><b>CSS Value</b></td>
+                    </tr>
+                </table>
+                <h2 id="custom-classes">2.2. Custom classes</h2>
+                <div class="paragraph">
+                    <b>PixelbiteCSS</b> is a framework with tons of custom classes. Most of them are predefined, so you
+                    don't need to create them, or use CSS file.
+                </div>
+                <div class="paragraph">
+                    It also uses custom colors that can be changed (more on that <a href="#custom-colors">later</a>)
+                </div>
+                <pre><code>&lt;h3 class=&quot;<code class="c-info">c-primary</code>&quot;&gt;Primary&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-secondary</code>&quot;&gt;Secondary&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-success</code>&quot;&gt;Success&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-danger</code>&quot;&gt;Danger&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-warning</code>&quot;&gt;Warning&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-info</code>&quot;&gt;Info&lt;/h3&gt;</code></pre>
+                <div class="workingCode">
+                    <h3 class="c-purple50">Primary</h3>
+                    <h3 class="c-purple70">Secondary</h3>
+                    <h3 class="c-success">Success</h3>
+                    <h3 class="c-danger">Danger</h3>
+                    <h3 class="c-warning">Warning</h3>
+                    <h3 class="c-info">Info</h3>
+                    <span>This site already changed primary and secondary color</span>
+                </div>
+                <div class="paragraph">
+                    Click to view-through CSS file <a
+                        href="https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css">here</a>.
+                </div>
+                <h1>3. Custom elements</h1>
+                <div class="paragraph">
+                    <b>PixelbiteCSS</b> use custom elements, which are staple of a first version and was a main
+                    appealing point for creating this framework.
+                </div>
+                <div class="paragraph">
+                    Different elements have different syntax. Most features are still in experimental state, so please
+                    have in mind some minor bugs if not used correctly.
+                </div>
+                <h2 id="onclick-href">3.1. Onclick href</h2>
+                <div class="paragraph">
+                    <b>Onclick href</b> is essentially a function that allows buttons to open pages and scroll to
+                    different articles on page.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>href('[url_or_pointer]')</code>
+                </div>
+                <pre><code>&lt;button onclick=&quot;<code class="c-info">href('https://github.com/Pixelbite-CSS')</code>&quot;&gt;Open page my favorite page&lt;/button&gt;
+&lt;button onclick=&quot;<code class="c-info">href('#onclick-href')</code>&quot;&gt;Scroll to my favorite article&lt;/button&gt;</code></pre>
+                <div class="workingCode">
+                    <button onclick="href('https://github.com/Pixelbite-CSS')">Open page my favorite page</button>
+                    <button onclick="href('#onclick-href')">Scroll to my favorite article</button>
+                </div>
+                <h2 id="toggle-element">3.2. Toggle element</h2>
+                <div class="paragraph">
+                    <b>Toggle element</b> is a function, that can show and hide multiple elements with same classname.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>toggleElement([class_name_of_elements_to_hide])</code>
+                </div>
+                <div class="paragraph">
+                    <ul>
+                        <li>You can put which ever name
+                            you want, but some classnames already used in a file can cause damage to those elements.
+                            Please use
+                            unique class name.
+                        </li>
+                    </ul>
+                </div>
+                <pre><code>&lt;button onclick=&quot;<code class="c-info">toggleElement('custom-toggle-1')</code>&quot;&gt;Toggle&lt;/button&gt;
+&lt;h3 class=&quot;<code class="c-info">custom-toggle-1</code>&quot;&gt;I'm shown&lt;/h3&gt;</code></pre>
+                <div class="workingCode">
+                    <button onclick="toggleElement('custom-toggle-1')">Toggle</button>
+                    <h3 class="custom-toggle-1">I'm shown</h3>
+                </div>
+                <div class="paragraph">
+                    Also, for purposes of having one or multiple elements hidden, there is a <code>hidden</code> class that hides
+                    elements on first page load.
+                </div>
+                <pre><code>&lt;button onclick=&quot;<code class="c-info">toggleElement('custom-toggle-2')</code>&quot;&gt;Toggle&lt;/button&gt;
+&lt;h3 class=&quot;<code class="c-info">custom-toggle-2 hidden</code>&quot;&gt;I'm hidden&lt;/h3&gt;</code></pre>
+                <div class="workingCode">
+                    <button onclick="toggleElement('custom-toggle-2')">Toggle</button>
+                    <h3 class="custom-toggle-2 hidden">I'm hidden</h3>
+                </div>
+                <div class="paragraph">
+                    This function can be also used, to create a switch looking button. This can have multiple purposes.
+                </div>
+                <pre><code>&lt;button class=&quot;<code class="c-info">custom-toggle-3 bg-info</code>&quot; onclick=&quot;<code
+                        class="c-info">toggleElement('custom-toggle-3')</code>&quot;&gt;On&lt;/button&gt;
+&lt;button class=&quot;<code class="c-info">custom-toggle-3 hidden bg-danger</code>&quot; onclick=&quot;<code
+                            class="c-info">toggleElement('custom-toggle-3')</code>&quot;&gt;Off&lt;/button&gt;</code></pre>
+                <div class="w-100% p-10px foreach:m-0 b-1px-solid-primary br-4px">
+                    <button class="custom-toggle-3 bg-info" onclick="toggleElement('custom-toggle-3')">On</button>
+                    <button class="custom-toggle-3 hidden bg-danger" onclick="toggleElement('custom-toggle-3')">Off
+                    </button>
+                </div>
+                <h2 id="slideshow">3.3. Slideshow</h2>
+                <div class="paragraph">
+                    <b>Slideshow</b> does what basic slideshows on the website looks like. This custom element needs to
+                    work elements inside with classname of <code>slide</code>.
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">slideshow</code> w-100% h-400px&quot;&gt;
+    &lt;img class=&quot;<code class="c-info">slide</code>&quot; src=&quot;img1.png&quot;&gt;
+    &lt;img class=&quot;<code class="c-info">slide</code>&quot; src=&quot;img2.png&quot;&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="slideshow w-100% h-400px">
+                        <img class="slide"
+                             src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80">
+                        <img class="slide"
+                             src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80">
+                    </div>
+                    <span>Images are from <a class="c-white10 dark:c-white100"
+                                             href="https://unsplash.com">unsplash.com</a></span>
+                </div>
+                <h2 id="searchbar">3.4. Searchbar</h2>
+                <div class="paragraph">
+                    <b>Searchbar</b> allows users to search and filter out fixed amount of elements, with
+                    a value from input/searchbar.
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">searchbar</code>&quot;&gt;
+    &lt;input class=&quot;<code class="c-info">search</code>&quot; placeholder=&quot;Searching text&quot;/&gt;
+    &lt;div class=&quot;<code class="c-info">search-values</code>&quot;&gt;
+        &lt;div&gt;Adam&lt;/div&gt;
+        &lt;div&gt;Michael&lt;/div&gt;
+        &lt;div&gt;Carel&lt;/div&gt;
+        &lt;div&gt;Steve&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="searchbar c-black0">
+                        <input class="search w-100%" placeholder="Searching text"/>
+                        <div class="search-values">
+                            <div>Adam</div>
+                            <div>Michael</div>
+                            <div>Carel</div>
+                            <div>Steve</div>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="slider">3.5. Slider</h2>
+                <div class="paragraph">
+                    <b>Slider</b> is element that transform classic <code>checkbox</code> and <code>radio</code> into
+                    slider switch. The color can be customized by <code>--info-color</code>.
+                </div>
+                <pre><code>&lt;h3&gt;Checkbox&lt;/h3&gt;
+&lt;input class=&quot;<code class="c-info">slider</code>&quot; checked type=&quot;checkbox&quot;/&gt;
+&lt;input class=&quot;<code class="c-info">slider</code>&quot; type=&quot;checkbox&quot;/&gt;
+&lt;br&gt;
+&lt;h3&gt;Radio&lt;/h3&gt;
+&lt;input class=&quot;<code class="c-info">slider</code>&quot; name=&quot;type1&quot; checked type=&quot;radio&quot;/&gt;
+&lt;input class=&quot;<code class="c-info">slider</code>&quot; name=&quot;type1&quot; type=&quot;radio&quot;/&gt;
+&lt;input class=&quot;<code class="c-info">slider</code>&quot; name=&quot;type1&quot; type=&quot;radio&quot;/&gt;</code></pre>
+                <div class="workingCode">
+                    <h3>Checkbox</h3>
+                    <input class="slider" checked type="checkbox"/>
+                    <input class="slider" type="checkbox"/>
+                    <br>
+                    <h3>Radio</h3>
+                    <input class="slider" name="type1" checked type="radio"/>
+                    <input class="slider" name="type1" type="radio"/>
+                    <input class="slider" name="type1" type="radio"/>
+                </div>
+                <h2 id="float-input">3.6. Float input</h2>
+                <div class="paragraph">
+                    <b>Float input</b> is input with a floating label, that will shrink and move up on focus. It is only
+                    cosmetic element.
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">floatInput</code>&quot;&gt;
+    &lt;input id=&quot;input1&quot; class=&quot;w-100% br-6px&quot;/&gt;
+    &lt;label for=&quot;input1&quot;&gt;Label&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="floatInput">
+                        <input id="input1" class="w-100% br-6px"/>
+                        <label class="c-white0" for="input1">Label</label>
+                    </div>
+                </div>
+                <h2 id="close-x">3.7. Close x</h2>
+                <div class="paragraph">
+                    This <b>close x</b> is basically a button with cross inside it.
+                </div>
+                <pre><code>&lt;button class=&quot;<code
+                        class="c-info">close-x</code>&quot;&gt;&lt;/button&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="w-100% h-120px">
+                        <button class="close-x"></button>
+                    </div>
+                </div>
+                <div class="paragraph">
+                    This button can be combined with other classes to create a working popup. Example bellow
+                </div>
+                <pre><code>&lt;div class=&quot;<code
+                        class="c-info">toggle-popup w-100% bg-white100 br-6px ov-hidden</code>&quot;&gt;
+    &lt;div class=&quot;<code class="c-info">flexCenter flexMiddle p-48px-10px c-white0 fs-20px</code>&quot;&gt;
+        Something went wrong
+    &lt;/div&gt;
+    &lt;div class=&quot;<code class="c-info">flexRow</code>&quot;&gt;
+        &lt;button class=&quot;<code class="c-info">w-50% buttonOutline fw-400 p-12px c-info b-0 btop-1px-solid-info br-0</code>&quot; onclick=&quot;<code
+                            class="c-info">toggleElement('toggle-popup')</code>&quot;&gt;
+            Cancel
+        &lt;/button&gt;
+        &lt;button class=&quot;<code class="c-info">w-50% buttonOutline fw-400 p-12px c-info b-0 btop-1px-solid-info bleft-1px-solid-info br-0</code>&quot;onclick=&quot;<code
+                            class="c-info">toggleElement('toggle-popup')</code>&quot;&gt;
+            Okay
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;<code class="c-info">close-x</code>&quot; onclick=&quot;<code class="c-info">toggleElement('toggle-popup')</code>&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="toggle-popup shadow w-100% bg-white100 br-6px ov-hidden">
+                        <div class="flexCenter flexMiddle p-48px-10px c-white0 fs-20px">
+                            Something went wrong
+                        </div>
+                        <div class="flexRow">
+                            <button class="w-50% buttonOutline fw-400 p-12px c-info b-0 btop-1px-solid-info br-0"
+                                    onclick="toggleElement('toggle-popup')">Cancel
+                            </button>
+                            <button class="w-50% buttonOutline fw-400 p-12px c-info b-0 btop-1px-solid-info bleft-1px-solid-info br-0"
+                                    onclick="toggleElement('toggle-popup')">Okay
+                            </button>
+                        </div>
+                        <button class="close-x" onclick="toggleElement('toggle-popup')"></button>
+                    </div>
+                    <button class="toggle-popup hidden" onclick="toggleElement('toggle-popup')">Show popup</button>
+                </div>
+                <h2 id="loader">3.8. Loader</h2>
+                <div class="paragraph">
+                    <b>Loaders</b> loads first over everything. They essentially cover whole screen to hide elements
+                    loading in.
+                </div>
+                <div class="paragraph">
+                    <ul>
+                        <li>It is highly recommended to use. They are only used for loading page in, other instances
+                            can break the whole site. Always put them on the bottom of page.
+                        </li>
+                    </ul>
+                </div>
+                <div class="paragraph">
+                    In <b>PixelbiteCSS</b> there are two main loaders. <code>loader-line</code> and
+                    <code>loader-icon</code>.
+                </div>
+                <div class="paragraph">
+                    For <code>loader-line</code>:
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">loader loader-page flexCenter flexMiddle</code>&quot;&gt;
+    &lt;div class=&quot;<code class="c-info">loader-line</code>&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="w-100% h-140px flexCenter flexMiddle bg-white100">
+                        <div class="loader-line"></div>
+                    </div>
+                </div>
+                <div class="paragraph">
+                    For <code>loader-icon</code>:
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">loader loader-page flexCenter flexMiddle</code>&quot;&gt;
+    &lt;div class=&quot;<code class="c-info">loader-icon</code>&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="w-100% h-140px flexCenter flexMiddle bg-white100">
+                        <div class="loader-icon"></div>
+                    </div>
+                </div>
+                <h1>4. Custom features</h1>
+                <div class="paragraph">
+                    <b>PixelbiteCSS</b> has many features that are great and are just a really nice addition for every
+                    web developer and web designer.
+                </div>
+                <h2 id="dark-moder">4.1. Dark mode</h2>
+                <div class="paragraph">
+                    <b>Dark mode</b> is essential for <b>PixelbiteCSS</b>. It is very easy to use with its syntax.
+                    You will also need to call a function
+                    <code>changeThemeMode()</code> to switch themes.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>dark:[class]-[params]-...</code>
+                </div>
+                <div class="paragraph">
+                    <ul>
+                        <li>The <code>dark:</code> followed by a class needs to be <u>after</u> normal classes to work.
+                        </li>
+                    </ul>
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">bg-#ff0000 dark:bg-#0000ff p-24px</code>&quot;&gt;
+    Hello world
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="bg-#ff0000 dark:bg-#0000ff p-24px">Hello world</div>
+                </div>
+                <button onclick="changeThemeMode()">Switch theme</button>
+                <h2 id="foreach">4.2. Foreach
+                    <div class="label c-green50 b-1px-solid-green50">Experimental</div>
+                </h2>
+                <div class="paragraph">
+                    <b>Foreach</b> will add specific class to everything inside an element. Syntax is similar to <a
+                        href="#dark-moder">dark mode</a>, which is <code>foreach:</code> followed by class and its
+                    parameters.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>foreach:[class]-[params]-...</code>
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">flexColumn flexLeft g-12px foreach:c-#ff0000</code>&quot;&gt;
+    &lt;h3&gt;Hello&lt;/h3&gt;
+    &lt;h3&gt;Hello&lt;/h3&gt;
+    &lt;h3&gt;Hello&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="flexColumn flexLeft g-12px foreach:c-#ff0000">
+                        <h3>Hello</h3>
+                        <h3>Hello</h3>
+                        <h3>Hello</h3>
+                    </div>
+                </div>
+                <h2 id="dummy-text">4.3. Dummy text</h2>
+                <div class="paragraph">
+                    <b>Dummy text</b> (or by its syntax <code>loremIpsum</code>) generates a latin
+                    text. It can be used for showcases or mockups.
+                </div>
+                <div class="paragraph">
+                    Use syntax <code>loremIpsum-[number_of_sentences]</code>.
+                </div>
+                <pre><code>&lt;div class=&quot;<code
+                        class="c-info">loremIpsum-5</code>&quot;&gt;&lt;/div&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="loremIpsum-5"></div>
+                </div>
+                <h1>5. Customization</h1>
+                <div class="paragraph">
+                    <b>PixelbiteCSS</b> was build to be user-friendly to customize. You can change colors, change root
+                    variables or add custom colors.
+                </div>
+                <div class="paragraph">
+                    <ul>
+                        <li>These features needs to be in <code>&lt;script&gt;</code> tag to work properly.</li>
+                        <li>Or you can
+                            use them in <code>onclick</code> parameter.
+                        </li>
+                    </ul>
+                </div>
+                <h2 id="custom-colors">5.1. Custom colors</h2>
+                <div class="paragraph">
+                    <b>Custom colors</b> can be added by simple function. Colors are in <i>HSL</i> format, for easier
+                    use. In <b>PixelbiteCSS</b>, there are a already pre-made custom colors:
+                    <ul>
+                        <li><code>['white', 0, '0%']</code></li>
+                        <li><code>['black', 0, '0%']</code></li>
+                        <li><code>['red', 0, '100%']</code></li>
+                        <li><code>['orange', 36, '100%']</code></li>
+                        <li><code>['yellow', 59, '100%']</code></li>
+                        <li><code>['greenyellow', 74, '100%']</code></li>
+                        <li><code>['green', 108, '100%']</code></li>
+                        <li><code>['teal', 154, '100%']</code></li>
+                        <li><code>['cyan', 182, '100%']</code></li>
+                        <li><code>['blue', 235, '100%']</code></li>
+                        <li><code>['purple', 275, '100%']</code></li>
+                        <li><code>['pink', 300, '100%']</code></li>
+                    </ul>
+                </div>
+                <div class="paragraph">
+                    Also custom colors can be added. For example <code>addColorHsl('customColor', 112, 100)</code> and
+                    use it by
+                    <code>[class]-customColor[0-100]</code>.
+                </div>
+                <div class="paragraph">
+                    Syntax is for import <code>addColorHsl('[color_name]', [hue], [satuation])</code>
+                </div>
+                <div class="paragraph">
+                    Syntax is for classes <code>[class]-[color_name][lightness_0-100]</code>
+                </div>
+                <div class="paragraph">
+                    <ul>
+                        <li>Please, don't use "<code>-</code>" in custom name, it can destroy some elements.</li>
+                        <li>Please, don't use numbers in custom name, last number is
+                            lightness and it needs to be between 0 and 100.
+                        </li>
+                    </ul>
+                </div>
+                <pre><code>&lt;h3 class=&quot;<code class="c-info">c-customColor25</code>&quot;&gt;Hello world&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-customColor50</code>&quot;&gt;Hello world&lt;/h3&gt;
+&lt;h3 class=&quot;<code class="c-info">c-customColor75</code>&quot;&gt;Hello world&lt;/h3&gt;
+...
+&lt;script&gt;
+    <code class="c-info">addColorHsl('customColor', 112, 100)</code>
+&lt;/script&gt;</code></pre>
+                <div class="workingCode">
+                    <h3 class="c-customColor25">Hello world</h3>
+                    <h3 class="c-customColor50">Hello world</h3>
+                    <h3 class="c-customColor75">Hello world</h3>
+                </div>
+                <h2 id="custom-variables">5.2. Custom variables</h2>
+                <div class="paragraph">
+                    <b>Custom variables</b> allows you to change <code>:root</code> variables to your own liking.
+                    It is the first thing that loads with the page. There are these possible variables that can be
+                    changed:
+                    <ul>
+                        <li><code>--font-family</code></li>
+                        <li><code>--font-mono-family</code></li>
+                        <li><code>--primary-color</code></li>
+                        <li><code>--secondary-color</code></li>
+                        <li><code>--success-color</code></li>
+                        <li><code>--danger-color</code></li>
+                        <li><code>--warning-color</code></li>
+                        <li><code>--info-color</code></li>
+                    </ul>
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>changeVariable('[variable_pointer]', '[variable_value]')</code>
+                </div>
+                <pre><code>&lt;h3 class=&quot;<code class="c-info">c-primary</code>&quot;&gt;Hello world&lt;/h3&gt;
+...
+&lt;script&gt;
+    <code class="c-info">changeVariable('--primary-color', '#ffaa00')</code>
+&lt;/script&gt;</code></pre>
+                <div class="workingCode">
+                    <h3 class="c-primary">Hello world</h3>
+                </div>
+                <h2 id="alias-class">5.3. Alias class</h2>
+                <div class="paragraph">
+                    <b>Alias classes</b> are here, to chain multiple classes into one singular head class, that can be
+                    referenced anywhere in a file. You can create so-called modules with just one <b>alias</b>.
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>addAliasClass('[alias_name]', '[string_with_classes]')</code>
+                </div>
+                <pre><code>&lt;div class=&quot;<code class="c-info">customAlias</code>&quot;&gt;Hello world&lt;/div&gt;
+...
+&lt;script&gt;
+    <code class="c-info">addAliasClass('customAlias', 'flexCenter flexMiddle w-100% h-200px fw-900 fs-32px c-white100 dark:c-white10 bg-white0 dark:bg-white100')</code>
+&lt;/script&gt;</code></pre>
+                <div class="workingCode">
+                    <div class="customAlias">
+                        Hello world
+                    </div>
+                </div>
+                <h2 id="update-delay">5.4. Update delay</h2>
+                <div class="paragraph">
+                    <b>Update delay</b> is only a performance related function. Because <b>PixelbiteCSS</b>'s main loop
+                    is constantly changing, it can develop and hardware slowdown issue. To reduce hardware slowdown,
+                    there is a function that can change delay between each loop.
+                </div>
+                <div>
+                    <ul>
+                        <li>Don't put very high numbers, the loop contains <a href="#dark-moder">dark mode</a> related stuff, but if you are not
+                        using it, there is nothing to worry about.</li>
+                    </ul>
+                </div>
+                <div class="paragraph">
+                    Syntax is <code>changeClassUpdateDelay([ms])</code>
+                </div>
+                <pre><code>&lt;script&gt;
+    <code class="c-info">changeClassUpdateDelay(1200)</code>
+&lt;/script&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="w-100% flexCenter flexMiddle p-20px">
+        <a href="#">Scroll to up</a>
+    </div>
+    <div class="w-100% flexCenter flexMiddle p-42px bg-white10" id="footer">
+        <p class="c-white40">
+            Made possible with <a class="c-white40" href="https://github.com/Pixelbite-CSS">Pixelbite-CSS</a>
+        </p>
+    </div>
+</div>
+<div class="loader loader-page flexCenter flexMiddle">
+    <div class="loader-line"></div>
+</div>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js"></script>
+<script>
+    changeVariable('--primary-color', '#ffaa00')
+    changeVariable('--secondary-color', '#ebae34')
+    addAliasClass('customListSvg', 'fill-primary h-16px')
+    addAliasClass('customAlias', 'flexCenter flexMiddle w-100% h-200px fw-900 fs-32px c-white100 dark:c-white10 bg-white0 dark:bg-white100')
+    addAliasClass('paragraph', 'o-.85 m-0')
+    addAliasClass('workingCode', 'w-100% p-10px foreach:m-0 b-1px-solid-primary br-4px mb-12px')
+    addAliasClass('customModalTemplate', 'w-295px flexColumn g-8px buttonHoverDark br-4px p-12px flexLeft')
+    addColorHsl('customColor', 112, 100)
+
+    const classes = class_library
+    for (let i = 0; i < classes.length; i++) {
+        document.getElementById('class-list-table').innerHTML += "<tr>" +
+            "<td class='pl-3px'><code>" + classes[i][0] + "</code></td>" +
+            "<td class='pl-3px'><code>" + classes[i][1] + "</code></td>" +
+            "</tr>"
+    }
+
+    changeClassUpdateDelay(1200)
+</script>
+</body>
+</html>
