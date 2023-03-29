@@ -113,6 +113,16 @@
                     <a href="#alias-class">5.3. Alias class</a>
                     <a href="#update-delay">5.4. Update delay</a>
                 </div>
+                <div class="flex g-8px">
+                    <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M352 320c88.4 0 160-71.6 160-160c0-15.3-2.2-30.1-6.2-44.2c-3.1-10.8-16.4-13.2-24.3-5.3l-76.8 76.8c-3 3-7.1 4.7-11.3 4.7H336c-8.8 0-16-7.2-16-16V118.6c0-4.2 1.7-8.3 4.7-11.3l76.8-76.8c7.9-7.9 5.4-21.2-5.3-24.3C382.1 2.2 367.3 0 352 0C263.6 0 192 71.6 192 160c0 19.1 3.4 37.5 9.5 54.5L19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L297.5 310.5c17 6.2 35.4 9.5 54.5 9.5zM80 408a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                    </svg>
+                    Playground
+                </div>
+                <div class="w-100% pl-24px flexColumn flexAlignItems-flex_start">
+                    <a href="#interactive-playground">6. Try on page</a>
+                </div>
                 <a class="flex g-6px" href="#">
                     Back to top
                     <svg class="customListSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -230,7 +240,7 @@
                         <div>
                             Cheatsheet -
                             <a href="https://pixelbite-css.github.io/pixelbite-css/examples/cheatsheet/">demo</a> -
-                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/cheatsheep">code</a>
+                            <a href="https://github.com/Pixelbite-CSS/pixelbite-css/tree/main/examples/cheatsheet">code</a>
                         </div>
                     </div>
                 </div>
@@ -329,7 +339,8 @@
                     <h3 class="custom-toggle-1">I'm shown</h3>
                 </div>
                 <div class="paragraph">
-                    Also, for purposes of having one or multiple elements hidden, there is a <code>hidden</code> class that hides
+                    Also, for purposes of having one or multiple elements hidden, there is a <code>hidden</code> class
+                    that hides
                     elements on first page load.
                 </div>
                 <pre><code>&lt;button onclick=&quot;<code class="c-info">toggleElement('custom-toggle-2')</code>&quot;&gt;Toggle&lt;/button&gt;
@@ -697,8 +708,10 @@
                 </div>
                 <div>
                     <ul>
-                        <li>Don't put very high numbers, the loop contains <a href="#dark-moder">dark mode</a> related stuff, but if you are not
-                        using it, there is nothing to worry about.</li>
+                        <li>Don't put very high numbers, the loop contains <a href="#dark-moder">dark mode</a> related
+                            stuff, but if you are not
+                            using it, there is nothing to worry about.
+                        </li>
                     </ul>
                 </div>
                 <div class="paragraph">
@@ -707,6 +720,30 @@
                 <pre><code>&lt;script&gt;
     <code class="c-info">changeClassUpdateDelay(1200)</code>
 &lt;/script&gt;</code></pre>
+                <h1 id="interactive-playground">6. Interactive playground</h1>
+                <div class="paragraph">
+                    Try writing your code bellow:
+                </div>
+                <pre class="p-0 w-100% ar-3/1 of-hidden"><textarea oninput="changePlaygroundHTML(this)"
+                                                                   class="w-100% p-24px h-100% m-0 b-0 bg-transparent c-primary"
+                                                                   style="resize: none;"><div class="w-100% h-20px bg-red50"></div>
+<div class="w-100% h-20px bg-orange50"></div>
+<div class="w-100% h-20px bg-yellow50"></div>
+<div class="w-100% h-20px bg-green50"></div>
+<div class="w-100% h-20px bg-cyan50"></div>
+<div class="w-100% h-20px bg-blue50"></div>
+<div class="w-100% h-20px bg-purple50"></div>
+<div class="w-100% h-20px bg-pink50"></div></textarea></pre>
+                <div class="workingCode" id="playground">
+                    <div class="w-100% h-20px bg-red50"></div>
+                    <div class="w-100% h-20px bg-orange50"></div>
+                    <div class="w-100% h-20px bg-yellow50"></div>
+                    <div class="w-100% h-20px bg-green50"></div>
+                    <div class="w-100% h-20px bg-cyan50"></div>
+                    <div class="w-100% h-20px bg-blue50"></div>
+                    <div class="w-100% h-20px bg-purple50"></div>
+                    <div class="w-100% h-20px bg-pink50"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -724,6 +761,10 @@
 </div>
 <script src="https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js"></script>
 <script>
+    const changePlaygroundHTML = (element) => {
+        document.getElementById('playground').innerHTML = element.value
+    }
+
     changeVariable('--primary-color', '#ffaa00')
     changeVariable('--secondary-color', '#ebae34')
     addAliasClass('customListSvg', 'fill-primary h-16px')
