@@ -1,0 +1,44 @@
+<div class="w-100% flexRow flexSpaceBetween p-12px flexCenter darkmodeClassics bbottom-1px-solid-rgba(128,128,128,.2) zIndex-11">
+    <div class="auto-width flexRow flexSpaceBetween">
+        <a href="./${backfolder}" class="w-240px td-none fs-20px fw-600 c-cherry40 dark:c-cherry58 flexLeft flexMiddle g-6px">
+            <i class="fa-solid fa-code pt-5px"></i>
+            PixelbiteCSS
+        </a>
+        <div class="flexCenter flexMiddle min800:d-none max800:d-flex g-18px fs-8px">
+            <a href="./${backfolder}/" class="headerLink">Home</a>
+            <a href="./${backfolder}/docs" class="headerLink">Docs</a>
+            <a href="./${backfolder}/examples" class="headerLink">Examples</a>
+            <a href="./${backfolder}/news" class="headerLink">News</a>
+        </div>
+        <div class="w-240px flexBottom min800:d-none max800:d-flex g-8px">
+            <a href="https://github.com/Pixelbite-CSS/" class="headerRoundedButton" target="_blank">
+                <i class="fa-brands fa-github c-cherry40 dark:c-cherry90 fs-18px mb-1px"></i>
+                Visit Github
+            </a>
+            <a onclick="changeTheme()" class="headerRoundedFullButton pointer ar-1/1">
+                <i class="fa-solid fa-moon c-white dark:c-black fs-18px mb-1px"></i>
+            </a>
+        </div>
+        <div class="min800:d-flex max800:d-none">
+            <button onclick="toggleElement('headerMenu')" class="bg-transparent flexCenter flexMiddle buttonHoverDark ar-1/1">
+                <i class="fa-solid fa-ellipsis-vertical c-black dark:c-white fs-16px mb-1px"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="min800:d-flex max800:d-none w-100%">
+    <div class="flexColumn hidden headerMenu p-12px g-8px darkmodeClassics shadow zIndex-10 w-100% bbottom-1px-solid-rgba(128,128,128,.3)">
+        <a href="./${backfolder}/" class="headerLink w-100%">Home</a>
+        <a href="./${backfolder}/docs" class="headerLink w-100%">Docs</a>
+        <a href="./${backfolder}/examples" class="headerLink w-100%">Examples</a>
+        <a href="./${backfolder}/news" class="headerLink w-100%">News</a>
+        <a onclick="changeTheme()" class="headerLink w-100% ta-right pointer">
+            Change Theme
+            <i class="fa-solid fa-moon c-black dark:c-white fs-16px ml-6px"></i>
+        </a>
+        <a href="https://github.com/Pixelbite-CSS/" class="headerLink w-100% ta-right">
+            Visit Github
+            <i class="fa-brands fa-github c-black dark:c-white fs-16px ml-6px"></i>
+        </a>
+    </div>
+</div>

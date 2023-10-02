@@ -4,194 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | PixelbiteCSS</title>
-    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/1.4.2/pixelbite.css">
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css">
 </head>
-
-<body>
-<div class="w-100% bg-white100 dark:bg-black20 dark:c-white100">
-    <div class="w-100% flex">
-        <div class="auto-width flexColumn p-22px g-12px">
-            <div class="flex flexLeft">
-                <button onclick="href('./')" class="buttonOutline b-none flexCenter flexMiddle fw-700 fs-32px">
-                    PIXELBITE
-                </button>
-            </div>
-            <div class="w-100% auto-menu flexRow flexSpaceBetween">
-                <button class="auto-menu-button bg-transparent b-1px-solid-primary"
-                        onclick="toggleElement('toggle-menu')">
-                    <svg class="fill-white10 dark:fill-white100 h-24px" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 448 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                    </svg>
-                </button>
-                <div class="toggle-menu flexRow g-12px foreach:b-none foreach:c-white0 foreach:dark:c-white100">
-                    <button onclick="href('./')" class="buttonHoverDark buttonOutline">
-                        Home
-                    </button>
-                    <button onclick="href('./docs.html')" class="buttonHoverDark buttonOutline">
-                        Docs
-                    </button>
-                    <button onclick="href('./about.html')" class="buttonHoverDark buttonOutline">
-                        About
-                    </button>
+<body class="darkmodeClassics">
+    <component path="./components/header.html" class="fixed w-100%" backfolder="."></component>
+    <div class="w-100% darkmodeFont gradient-transparent-cherry96-0 dark:gradient-transparent-cherry9-0">
+        <div class="h-500px pos-absolute bottom-0 left-0 w-100%">
+            <component path="./components/tiled_wallpaper.html"></component>
+        </div>
+        <div class="auto-width p-128px-32px flexColumn flexCenter flexMiddle g-18px mt-60px">
+            <p class="of-hidden ta-center lh-1.2">
+                <span class="fs-52px fw-800">Framework that makes website development <span class="c-primary">easier</span>.</span>
+            </p>
+            <p class="w-60% o-.7 ta-center">
+                Customisable CSS and Javascript framework, that uses its own classes like <a class="c-primary fw-500">flex</a>, <a class="c-primary fw-500">ta-center</a> or <a class="c-primary fw-500">slideshow</a> to help you create websites faster and responsive.
+            </p>
+            <p>
+                <div class="flexRow g-8px">
+                    <a href="./docs" class="fs-14px td-none c-white bg-primary d-inline_block p-6px-18px br-6px fw-600">
+                        Get started
+                        <i class="fa-solid fa-arrow-right-long ml-20px"></i>
+                    </a>
+                    <a href="#" class="fs-14px td-none c-black dark:c-white bg-rgba(128,128,128,.4) d-inline_block p-6px-18px br-6px fw-600">
+                        Read what's new
+                        <i class="fa-solid fa-arrow-right-long ml-20px"></i>
+                    </a>
                 </div>
-                <button class="toggle-menu buttonHoverDark flexCenter flexMiddle br-50px w-42px h-42px p-0"
-                        onclick="changeThemeMode()">
-                    <svg class="fill-white100 h-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path d="M256 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C352 78.8 273.2 0 176 0S0 78.8 0 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0C66.5 324.9 86.4 352.1 96 384H256zM176 512c44.2 0 80-35.8 80-80V416H96v16c0 44.2 35.8 80 80 80zM96 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/>
-                    </svg>
-                </button>
+            </p>
+            <div class="fs-16px w-100% pos-relative">
+                <component path="./components/codeblock.html"></component>
             </div>
         </div>
     </div>
-    <div class="w-100%">
-        <div class="slideshow slide-shadow w-100% minH-500px c-white10">
-            <div class="slide custom-slide">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                     alt=""/>
-                <div class="auto-width flex flexColumn flexJustifyContent-left flexAlignItems-flex_start p-64px-48px ta-left">
-                    <h1 class="c-custom20 textOverflow">New PixelbiteCSS Version</h1>
-                    <div class="p-0-0-20px">
-                        <div class="c-custom10">
-                            See how to use and download our newest <b>version 1.4.2</b> with newest features and more
-                            bug fixes
-                        </div>
-                    </div>
-                    <button onclick="href('./docs.html#initialization')" class="bg-custom20">Read more in Docs</button>
-                </div>
-            </div>
-            <div class="slide custom-slide">
-                <img src="https://images.unsplash.com/photo-1515603403036-f3d35f75ca52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                     alt=""/>
-                <div class="auto-width flex flexColumn flexJustifyContent-left flexAlignItems-flex_start p-64px-48px ta-left">
-                    <h1 class="c-custom20 textOverflow">Custom Slideshows</h1>
-                    <div class="p-0-0-20px">
-                        <div class="c-custom10">
-                            Use for custom and easy to learn <b>slideshows</b> on your website
-                        </div>
-                    </div>
-                    <button onclick="href('./docs.html#slideshow')" class="bg-custom20">Read more in Docs</button>
-                </div>
-            </div>
-            <div class="slide custom-slide">
-                <img src="https://images.unsplash.com/photo-1501250987900-211872d97eaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                     alt=""/>
-                <div class="auto-width flex flexColumn flexJustifyContent-left flexAlignItems-flex_start p-64px-48px ta-left">
-                    <h1 class="c-custom20 textOverflow">Custom Working Searchbars</h1>
-                    <div class="p-0-0-20px">
-                        <div class="c-custom10">
-                            See in docs, how to use and implement working <b>searchbars</b>
-                        </div>
-                    </div>
-                    <button onclick="href('./docs.html#searchbar')" class="bg-custom20">Read more in Docs</button>
-                </div>
-            </div>
-            <div class="slide custom-slide">
-                <img src="https://images.unsplash.com/photo-1635372722656-389f87a941b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
-                     alt=""/>
-                <div class="auto-width flex flexColumn flexJustifyContent-left flexAlignItems-flex_start p-64px-48px ta-left">
-                    <h1 class="c-custom20 textOverflow">Alias class</h1>
-                    <div class="p-0-0-20px">
-                        <div class="c-custom10">
-                            You can use custom <b>Alias class</b>, that will implement multiple classes into one class
-                            alias
-                        </div>
-                    </div>
-                    <button onclick="href('./docs.html#alias-class')" class="bg-custom20">Read more in Docs</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-100% p-56px-0">
-        <div class="auto-width auto-size flexRow flexCenter flexAlignItems-flex_start flexWrap c-white10 dark:c-white100 g-32px of-hidden">
-            <div class="w-600px flexLeft flexColumn g-12px">
-                <h1>Do you want to join development?</h1>
-                <img class="w-100% br-8px"
-                     src="https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-                <span class="ta-left">Image is from <a class="c-white10 dark:c-white100" href="https://unsplash.com">unsplash.com</a></span>
-                <div class="paragraph">
-                    This project is open-source project. Everyone can look into the source code on <a
-                        href="https://github.com/Pixelbite-CSS">github</a> and suggest changes. Feel free to suggest changes or make completely different ones.
-                </div>
-                <div class="paragraph">
-                    If you are interested, here is a <a href="https://github.com/Pixelbite-CSS/pixelbite-css">main repository</a>.
-                </div>
-                <h1>How it works?</h1>
-                <img class="w-100% br-8px"
-                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-                <span class="ta-left">Image is from <a class="c-white10 dark:c-white100" href="https://unsplash.com">unsplash.com</a></span>
-                <div class="paragraph">
-                    If you have been ever wondering how this work, let me explain.
-                </div>
-                <div class="paragraph">
-                    Basically you have a CSS library, which can work on its own, but for more features, you'll need to
-                    use JavaScript library too. When you have an element, you will add a class (for example <code>bg-red50</code>)
-                </div>
-                <pre><code>&#60;h3 class="bg-red50"&#62;Hello world&#60;/h3&#62;</code></pre>
-                <div class="w-100% p-10px foreach:m-0 b-1px-solid-primary br-4px">
-                    <h3 class="bg-red50">Hello world</h3>
-                </div>
-                <div class="paragraph">
-                    Of course this library has way more features and classes than <i>background-color</i>. <a
-                        href="./docs.html">Please refer
-                    to our docs</a>.
-                </div>
-            </div>
-            <div class="w-300px sticky top-20px flexColumn flexCenter ta-center g-12px">
-                <img class="w-100% ar-1/1 br-50%" src="https://avatars.githubusercontent.com/u/83291717?v=4"/>
-                <h3>Hi, my name is Jan</h3>
-                <div class="paragraph">
-                    I'm a main and only developer of <a href="https://github.com/Pixelbite-CSS">PixelbiteCSS</a>.
-                    I've made this framework for my <a href="https://github.com/SPSMB">high school</a> graduation
-                    project.<br>
-                    <br>
-                    Make sure to check out my <a href="https://neostetic.github.io">cool website</a> 🔥🔥.
-                </div>
-                <div class="flexCenter flexMiddle flexRow">
-                    <button onclick="href('https://twitter.com/neostetic')"
-                            class="buttonHoverDark buttonOutline b-none flexCenter flexMiddle br-50% w-48px h-48px p-0">
-                        <svg class="fill-white0 dark:fill-white100 h-24px" xmlns="http://www.w3.org/2000/svg"
-                             viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
-                        </svg>
-                    </button>
-                    <button onclick="href('https://github.com/neostetic')"
-                            class="buttonHoverDark buttonOutline b-none flexCenter flexMiddle br-50% w-48px h-48px p-0">
-                        <svg class="fill-white0 dark:fill-white100 h-24px" xmlns="http://www.w3.org/2000/svg"
-                             viewBox="0 0 496 512">
-                            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                        </svg>
-                    </button>
-                    <button onclick="href('mailto:gg.polacek@gmail.com')"
-                            class="buttonHoverDark buttonOutline b-none flexCenter flexMiddle br-50% w-48px h-48px p-0">
-                        <svg class="fill-white0 dark:fill-white100 h-24px" xmlns="http://www.w3.org/2000/svg"
-                             viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w-100% flexCenter flexMiddle p-42px bg-white10" id="footer">
-        <p class="c-white40">
-            Made possible with <a class="c-white40" href="https://github.com/Pixelbite-CSS">Pixelbite-CSS</a>
+    <div class="auto-width flexCenter flexMiddle flexColumn p-64px-14px" id="getting_started">
+        <component path="./components/title_icon.html" icon="fa-solid fa-cube"></component>
+        <p class="fw-700 fs-42px ta-center m-0">Getting started</p>
+        <p class="ta-center o-.8 w-500px">
+            Start using <span class="c-primary">PixelbiteCSS</span> now by selecting version you want to use or you can optionally donwload library via <a href="https://www.jsdelivr.com/package/npm/pixelbite-css" target="_blank">npm</a> or <a href="https://github.com/Pixelbite-CSS/pixelbite-css" target="_blank">Github</a>.
+            <br><br>
+            <a href="./docs">Read installation docs</a>
         </p>
+        <div class="flexRow flexWrap-wrap flexCenter flexLeft w-100% p-32px g-48px">
+            <div class="w-820px flexColumn flexLeft bg-cherry98 dark:bg-cherry6 br-16px p-12px-28px">
+                <component path="./home/components/link_block.html" object:object="https://pixelbite-css.github.io/pixelbite-css/assets/object.json"></component>
+            </div>
+        </div>
     </div>
-</div>
-<div class="loader loader-page flexCenter flexMiddle">
+    <div class="auto-width flexRow flexCenter flexTop flexWrap g-24px foreach:ta-left">
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-fill-drip"></component>
+            <p class="fw-700 fs-42px ta-center m-0">Easy to customize</p>
+            <p class="ta-left o-.8 w-600px">
+                You can customize every aspect of <a href="./">PixelbiteCSS</a>'s framework. Change or add colors, variables, classes, elements, scripts and more
+                with fully customizable <b>.conf</b> files.
+            </p>
+        </div>
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-shapes"></component>
+            <p class="fw-700 fs-42px ta-center m-0">Custom components</p>
+            <p class="ta-left o-.8 w-600px">
+                Since version 1.5 you can use your own custom created components stright inside of HTML files. Use tags such as <code>${variable}</code> inside
+                your code to make use of <b>custom variables</b>.
+            </p>
+        </div>
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-palette"></component>
+            <p class="fw-700 fs-42px ta-center m-0">Custom themes</p>
+            <p class="ta-left o-.8 w-600px">
+                You can use, create or edit themes on <a href="https://github.com/Pixelbite-CSS/themes" target="_blank">Github themes repository</a> to make
+                websites even faster and nicer.
+            </p>
+        </div>
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-circle-half-stroke"></component>
+            <p class="fw-700 fs-42px ta-center m-0">Darkmode</p>
+            <p class="ta-left o-.8 w-600px">
+                <b>PixelbiteCSS</b> uses it's own custom <b>darkmode</b>. Implement your own custom <b>darkmode</b> theme for your website with easy to use prefixes.
+            </p>
+        </div>
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-font-awesome"></component>
+            <p class="fw-700 fs-42px ta-center m-0">FontAwesome support</p>
+            <p class="ta-left o-.8 w-600px">
+                <b>PixelbiteCSS</b> supports implementation of <a href="https://fontawesome.com" target="_blank">FontAwesome</a>'s icons. Change <b>FontAwesome</b>
+                url in <i>config file</i>.
+            </p>
+        </div>
+        <div class="w-560px flexLeft flexMiddle flexColumn mb-128px">
+            <component path="./components/title_icon.html" icon="fa-solid fa-box-open"></component>
+            <p class="fw-700 fs-42px ta-center m-0">Open Source</p>
+            <p class="ta-left o-.8 w-600px">
+                This project is fully backed by its own community. Join us now at our <a href="https://github.com/Pixelbite-CSS" target="_blank">Github</a> and
+                help contribute.
+            </p>
+        </div>
+    </div>
+</body>
+<div class="loader loader-page flexCenter flexMiddle bg-custom">
     <div class="loader-line"></div>
 </div>
-<script src="https://pixelbite-css.github.io/pixelbite-css/script/1.4.2/pixelbite.js"></script>
-<script>
-    changeVariable('--primary-color', '#ffaa00')
-    changeVariable('--secondary-color', '#ebae34')
-    addAliasClass('custom-slide', 'flex flexCenter flexMiddle flexAlignItems-flex_end flexJustifyContent-left w-100% minH-500px')
-</script>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js"></script> 
 </body>
 </html>

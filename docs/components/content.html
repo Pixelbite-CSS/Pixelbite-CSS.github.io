@@ -1,0 +1,100 @@
+<div class="w-100%">
+    <div class="auto-width flexCenter p-24px">
+        <div class="searchbar w-320px">
+            <input class="search b-1px-solid-white80 bg-white100 c-white0 dark:b-1px-solid-primary dark:bg-cherry10 dark:c-white100" placeholder="Search documentation..."/>
+            <div class="search-values foreach:c-black0">
+                ${for(object[0].length :: <div><a href="#${object[0][i].id}" class="td-none w-100%">${object[0][i].title} (Introduction)</a></div> )}
+                ${for(object[1].length :: <div><a href="#${object[1][i].id}" class="td-none w-100%">${object[1][i].title} (Stylesheet)</a></div> )}
+                ${for(object[2].length :: <div><a href="#${object[2][i].id}" class="td-none w-100%">${object[2][i].title} (Custom element)</a></div> )}
+                ${for(object[3].length :: <div><a href="#${object[3][i].id}" class="td-none w-100%">${object[3][i].title} (Prefix)</a></div> )}
+                ${for(object[4].length :: <div><a href="#${object[4][i].id}" class="td-none w-100%">${object[4][i].title} (Customization)</a></div> )}
+            </div>
+        </div>
+    </div>
+    <div class="auto-width auto-size flex flexCenter flexLeft flexRow flexWrap g-4px p-24px">
+        <div class="w-200px sticky maxH-100vh ofy-auto flexColumn flexLeft pt-12px pb-12px ml-12px g-4px">
+            <span class="mt-12px fw-400 fs-14px">Introduction</span>
+            ${for(
+                object[0].length ::
+                <div class="flexRow flexTop flexMiddle g-18px">
+                    <div class="p-1px bg-white50 h-22px o-.3"></div>
+                    <a class="td-none c-primary dark:c-white60 fs-14px" href="#${object[0][i].id}" value="Introduction">${object[0][i].title}</a>
+                </div>
+            )}
+            <span class="fw-400 fs-14px">Stylesheet</span>
+            ${for(
+                object[1].length ::
+                <div class="flexRow flexTop flexMiddle g-18px">
+                    <div class="p-1px bg-white50 h-22px o-.3"></div>
+                    <a class="td-none c-primary dark:c-white60 fs-14px" href="#${object[1][i].id}" value="Stylesheet">${object[1][i].title}</a>
+                </div>
+            )}
+            <span class="fw-400 fs-14px">Custom element</span>
+            ${for(
+                object[2].length ::
+                <div class="flexRow flexTop flexMiddle g-18px">
+                    <div class="p-1px bg-white50 h-22px o-.3"></div>
+                    <a class="td-none c-primary dark:c-white60 fs-14px" href="#${object[2][i].id}" value="Custom element">${object[2][i].title}</a>
+                </div>
+            )}
+            <span class="fw-400 fs-14px">Prefix</span>
+            ${for(
+                object[3].length ::
+                <div class="flexRow flexTop flexMiddle g-18px">
+                    <div class="p-1px bg-white50 h-22px o-.3"></div>
+                    <a class="td-none c-primary dark:c-white60 fs-14px" href="#${object[3][i].id}" value="Prefix">${object[3][i].title}</a>
+                </div>
+            )}
+            <span class="fw-400 fs-14px">Customization</span>
+            ${for(
+                object[4].length ::
+                <div class="flexRow flexTop flexMiddle g-18px">
+                    <div class="p-1px bg-white50 h-22px o-.3"></div>
+                    <a class="td-none c-primary dark:c-white60 fs-14px" href="#${object[4][i].id}" value="Customization">${object[4][i].title}</a>
+                </div>
+            )}
+        </div>
+        <div class="max1200:w-900px min1200:w-70% p-12px">
+            ${for(
+                object[0].length ::
+                <div id="${object[0][i].id}">
+                    <span class="c-primary">Introduction</span>
+                    <component markdown="github" path="https://pixelbite-css.github.io/docs-repo/1.6.2/English/${object[0][i].id}.md"></component>
+                </div>
+                <div class="p-1px br-50px bg-primary o-.2 m-24px-0-46px-0"></div>
+            )}
+            ${for(
+                object[1].length ::
+                <div id="${object[1][i].id}">
+                    <span class="c-primary">Stylesheet</span>
+                    <component markdown="github" path="https://pixelbite-css.github.io/docs-repo/1.6.2/English/${object[1][i].id}.md"></component>
+                </div>
+                <div class="p-1px br-50px bg-primary o-.2 m-24px-0-46px-0"></div>
+            )}
+            ${for(
+                object[2].length ::
+                <div id="${object[2][i].id}">
+                    <span class="c-primary">Custom element</span>
+                    <component markdown="github" path="https://pixelbite-css.github.io/docs-repo/1.6.2/English/${object[2][i].id}.md"></component>
+                </div>
+                <div class="p-1px br-50px bg-primary o-.2 m-24px-0-46px-0"></div>
+            )}
+            ${for(
+                object[3].length ::
+                <div id="${object[3][i].id}">
+                    <span class="c-primary">Prefix</span>
+                    <component markdown="github" path="https://pixelbite-css.github.io/docs-repo/1.6.2/English/${object[3][i].id}.md"></component>
+                </div>
+                <div class="p-1px br-50px bg-primary o-.2 m-24px-0-46px-0"></div>
+            )}
+            ${for(
+                object[4].length ::
+                <div id="${object[4][i].id}">
+                    <span class="c-primary">Customization</span>
+                    <component markdown="github" path="https://pixelbite-css.github.io/docs-repo/1.6.2/English/${object[4][i].id}.md"></component>
+                </div>
+                <div class="p-1px br-50px bg-primary o-.2 m-24px-0-46px-0"></div>
+            )}
+        </div>
+    </div>
+</div>

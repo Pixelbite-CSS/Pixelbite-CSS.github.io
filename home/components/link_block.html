@@ -1,0 +1,34 @@
+<div class="fs-22px flexColumn flexLeft g-8px pt-12px">
+    <div class="fw-600">Include via link</div>
+</div>
+<p class="o-.8 ta-justify">
+    Include PixelbiteCSS via including link to specific version. You can select minified or classic version or try experimental version for your own project.
+    <br><br>
+    Select version:
+</p>
+<div class="dropdown zIndex-50" onclick="document.getElementById('codeIdCss').innerHTML = this.value.split('&&')[0];document.getElementById('codeIdJs').innerHTML = this.value.split('&&')[1]">
+    <select>
+        ${for(
+            object.length :: 
+            <option value="${object[i].css}&&${object[i].js}">${object[i].version}</option>
+        )}
+    </select>
+</div>
+<div class="p-12px-0 flex flexColumn g-12px">
+    <div class="foreach:ff-monospace bg-black b-none br-20px w-100% flexColumn flexLeft p-16px g-16px shadow ff-monospace">
+        <div class="flex g-8px">
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+        </div>
+<pre class="m-0 numberedLines fs-14px c-white60"><span>&lt;link rel="stylesheet" href="<code class="c-cherry70" id="codeIdCss">${object[0].css}</code>"&gt;</span></code></pre>
+    </div>
+    <div class="foreach:ff-monospace bg-black b-none br-20px w-100% flexColumn flexLeft p-16px g-16px shadow ff-monospace">
+        <div class="flex g-8px">
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+            <div class="p-6px br-50% bg-rgba(128,128,128,.5)"></div>
+        </div>
+<pre class="m-0 numberedLines fs-14px c-white60"><span>&lt;script src="<code class="c-cherry70" id="codeIdJs">${object[0].js}</code>"&gt;&lt;/script&gt;</span></code></pre>
+    </div>
+</div>
