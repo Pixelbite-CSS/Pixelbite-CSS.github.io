@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News | PixelbiteCSS</title>
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css">
+</head>
+<body class="darkmodeClassics">
+    <component path="../components/header.html" class="w-100%" backfolder=".."></component>
+    <component path="./components/content.html" object:object="https://pixelbite-css.github.io/news-repo/news/object.json"></component> 
+    <div class="auto-width p-12px">
+        <div class="bg-cherry60 c-white dark:bg-cherry40 p-48px-64px br-8px shadow-0-10px-20px-rgba(0,0,0,.3)
+            flex flexDirection-row flexJustifyContent-space_between min1000:flexDirection-column g-24px of-hidden pos-relative
+        ">
+            <div class="pos-absolute bottom-_100px right-80px fs-256px o-.5 c-black">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div>
+                <h2 class="fw-600">Have a questions?</h2>
+                <p class="o-.8">
+                    Look through our discussions on Github for answered questions or ask new question. 
+                </p>
+            </div>
+            <div class="w-300px ta-right">
+                <button class="bg-transparent c-white b-1px-solid-white" onclick="href('https://github.com/orgs/Pixelbite-CSS/discussions/6', true)">Find a question</button>
+            </div>
+        </div>       
+    </div>
+    <component path="../components/footer.html" class="w-100%" backfolder=".."></component>
+</body>
+<div class="loader loader-page flexCenter flexMiddle bg-custom">
+    <div class="loader-line"></div>
+</div>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js"></script>
+</body>
+</html>
