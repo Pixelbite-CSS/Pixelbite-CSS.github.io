@@ -1,13 +1,13 @@
 <div class="auto-width p-12px">
-    <br>
-    <img src="../../assets/pixelbitecss.svg" height="32px"/>
-    <h2>What's new</h2>
-    <br>
-    <div class="flexRow flexWrap flexCenter flexMiddle flexLeft g-24px">
+    <div class="w-100% max1214:ta-left min1214:ta-center p-46px-0">
+        <img src="../../assets/pixelbitecss.svg" height="32px"/>
+        <h2>What's new</h2>
+    </div>
+    <div class="flexRow flexWrap flexCenter flexMiddle max1214:flexJustifyContent-flex_start min1214:flexJustifyContent-center flexTop g-24px">
         ${for(
             object.length ::
             <div class="toggle-${object[i].id} flexColumn w-575px of-hidden br-12px bg-cherry98 dark:bg-cherry7 shadow-0-10px-30px-rgba(0,0,0,.2)
-                maxH-450px
+                maxH-450px minH-450px zIndex-1
             ">
                 <img src="${object[i].image}" width="100%" height="200px"/>
                 <div class="flexColumn flexLeft g-4px p-12px-24px pos-relative">
@@ -26,8 +26,9 @@
                     </div>
                 </div>
             </div>
-            <div class="toggle-${object[i].id} hidden flexColumn w-100% of-hidden br-12px">
+            <div class="toggle-${object[i].id} hidden flexColumn w-100% of-hidden br-12px pos-relative zIndex-1 bg-white dark:bg-cherry4">
                 <img src="${object[i].image}" width="100%" class="ar-16/9"/>
+                <div class="gradient-white-transparent-0 dark:gradient-cherry4-transparent-0 w-100% ar-16/9 pos-absolute top-0 left-0" style="pointer-events: none;"></div>
                 <div class="flexColumn flexLeft g-4px p-12px-24px pos-relative">
                     <div class="fw-700 fs-48px">${object[i].title}</div>
                     <div class="fs-12px flexRow flexLeft g-2px mb-12px g-6px">
@@ -43,5 +44,10 @@
                 </div>
             </div>
         )}
+        <div class="flexColumn g-24px w-575px of-hidden br-24px h-450px b-dashed-5px-cherry90 dark:b-dashed-5px-cherry10 c-cherry90 dark:c-cherry10 pos-absolute bottom-0 right-2px zIndex-0 ta-center flexCenter flexMiddle flexColumn max1214:d-flex min1214:d-none">
+            <i class="fa-solid fa-ghost fs-86px"></i>
+            <div class="fs-24px fw-700 w-50%">MORE ARTICLES WILL COME SOON</div>
+        </div>
+    </div>
     </div>
 </div>
