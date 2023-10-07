@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | PixelbiteCSS</title>
-    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/pixelbite.css">
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/1.6/pixelbite-min.css">
 </head>
 <body class="darkmodeClassics">
     <component path="./components/header.html" class="fixed w-100%" backfolder="."></component>
@@ -12,7 +12,8 @@
         <div class="h-500px pos-absolute bottom-0 left-0 w-100%">
             <component path="./components/tiled_wallpaper.html"></component>
         </div>
-        <div class="auto-width p-128px-32px flexColumn flexCenter flexMiddle g-18px max1000:mt-60px min1000:mt-0">
+        <div class="auto-width p-128px-32px flexColumn flexCenter flexMiddle g-18px max1000:mt-0px min1000:mt-0">
+            <component path="./home/components/version_block.html" object:object="https://pixelbite-css.github.io/pixelbite-css/assets/object.json"></component>
             <img src="./assets/logo_white_shield.svg" height="128"/>
             <p class="of-hidden ta-center lh-1.2">
                 <span class="fs-52px fw-800">Framework that makes website development <span class="c-primary">easier</span>.</span>
@@ -186,6 +187,6 @@
 <div class="loader loader-page flexCenter flexMiddle bg-custom">
     <div class="loader-line"></div>
 </div>
-<script src="https://pixelbite-css.github.io/pixelbite-css/script/pixelbite.js"></script> 
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/1.6/pixelbite-min.js"></script> 
 </body>
 </html>
