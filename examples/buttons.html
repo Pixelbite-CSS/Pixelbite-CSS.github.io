@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buttons | PixelbiteCSS</title>
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/1.6/pixelbite-min.css">
+</head>
+<body class="bg-white95 dark:bg-black10 c-black dark:c-white flex flexWrap-wrap g-32px">
+    
+    <!-- Button sizes -->
+    <div class="w-100% p-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexRow flexCenter flexMiddle flexWrap g-12px">
+            <button class="fs-10px p-4px-8px" onclick="href('#')">Size 10px</button>
+            <button class="fs-12px p-6px-10px" onclick="href('#')">Size 12px</button>
+            <button class="bg-secondary" onclick="href('#')">Size default</button>
+            <button class="fs-24px" onclick="href('#')">Size 24px</button>
+            <button class="fs-32px" onclick="href('#')">Size 32px</button>
+            <button class="fs-42px" onclick="href('#')">Size 42px</button>
+        </div>
+    </div>
+
+    <!-- Classic buttons -->
+    <div class="w-100% p-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexRow flexCenter flexMiddle flexWrap g-12px">
+            <button onclick="href('#')">Primary</button>
+            <button class="bg-secondary" onclick="href('#')">Secondary</button>
+            <button class="bg-success" onclick="href('#')">Success</button>
+            <button class="bg-danger" onclick="href('#')">Danger</button>
+            <button class="bg-warning" onclick="href('#')">Warning</button>
+            <button class="bg-info" onclick="href('#')">Info</button>
+            <button class="buttonHoverDark bg-transparent c-black dark:c-white" onclick="href('#')">Hover</button>
+        </div>
+    </div>
+
+    <!-- Rounded buttons -->
+    <div class="w-100% p-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexRow flexCenter flexMiddle flexWrap g-12px">
+            <button class="br-200px" onclick="href('#')">Primary</button>
+            <button class="bg-secondary br-200px" onclick="href('#')">Secondary</button>
+            <button class="bg-success br-200px" onclick="href('#')">Success</button>
+            <button class="bg-danger br-200px" onclick="href('#')">Danger</button>
+            <button class="bg-warning br-200px" onclick="href('#')">Warning</button>
+            <button class="bg-info br-200px" onclick="href('#')">Info</button>
+            <button class="buttonHoverDark bg-transparent c-black dark:c-white br-200px" onclick="href('#')">Hover</button>
+        </div>
+    </div>
+
+    <!-- Block buttons -->
+    <div class="w-100% p-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexCenter flexMiddle">
+            <div class="flexColumn flexCenter flexMiddle g-6px w-800px">
+                <button class="w-100%" onclick="href('#')">Primary</button>
+                <button class="bg-secondary w-100%" onclick="href('#')">Secondary</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Buttons with icons -->
+    <div class="w-100% p-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexRow flexCenter flexMiddle flexWrap g-12px">
+            <button onclick="href('#')">
+                Primary icon
+                <i class="fa-solid fa-arrow-right-long ml-20px"></i>
+            </button>
+            <button class="bg-secondary" onclick="href('#')">
+                Secondary icon
+                <i class="fa-solid fa-arrow-right-long ml-20px"></i>
+            </button>
+        </div>
+    </div>
+
+    <button onclick="changeTheme()" class="br-5000px ar-1/1 flex flexCenter flexMiddle fs-20px fixed top-auto left-auto bottom-20px right-20px"><i class="fa-solid fa-circle-half-stroke"></i></button>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/1.6/pixelbite-min.js"></script> 
+</body>
+</html>
