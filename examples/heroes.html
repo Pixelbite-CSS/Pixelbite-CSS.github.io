@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heroes | PixelbiteCSS</title>
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/1.6/pixelbite-min.css">
+</head>
+<body class="bg-white95 dark:bg-black10 c-black dark:c-white flex flexWrap-wrap g-32px">
+    
+    <!-- Centered hero -->
+    <div class="w-100% p-86px-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexColumn ta-center flexCenter flexMiddle g-12px">
+            <img src="https://pixelbite-css.github.io/assets/logo_white_shield.svg" width="72"/>
+            <h1 class="fs-48px">Centered hero</h1>
+            <p class="loremIpsum-8 fs-18px o-.8"></p>
+            <div class="flexRow g-12px">
+                <button class="fs-18px" onclick="href('#')">Primary button</button>
+                <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered hero with picture -->
+    <div class="w-100% p-86px-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexColumn ta-center flexCenter flexMiddle g-12px">
+            <h1 class="fs-48px">Centered hero with picture</h1>
+            <p class="loremIpsum-8 fs-18px o-.8"></p>
+            <div class="flexRow g-12px mb-22px">
+                <button class="fs-18px" onclick="href('#')">Primary button</button>
+                <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+            </div>
+            <img class="w-800px br-6px shadow" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+        </div>
+    </div>
+
+    <!-- Slideshow hero -->
+    <div class="w-100% shadow bg-white dark:bg-black15">
+        <div class="slideshow w-100% h-600px c-black">
+            <div class="slide slide-shadow w-100% minH-500px">
+                <img class="w-100% h-100%" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+                <div class="flexColumn flexBottom flexLeft p-32px h-100%">
+                    <h1 class="fs-48px">First slide header</h1>
+                    <p class="loremIpsum-8 fs-18px o-.8"></p>
+                    <div class="flexRow g-12px mb-22px">
+                        <button class="fs-18px" onclick="href('#')">Primary button</button>
+                        <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="slide slide-shadow w-100% minH-500px">
+                <img class="w-100% h-100%" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+                <div class="flexColumn flexBottom flexLeft p-32px h-100%">
+                    <h1 class="fs-48px">Second slide header</h1>
+                    <p class="loremIpsum-8 fs-18px o-.8"></p>
+                    <div class="flexRow g-12px mb-22px">
+                        <button class="fs-18px" onclick="href('#')">Primary button</button>
+                        <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="slide slide-shadow w-100% minH-500px">
+                <img class="w-100% h-100%" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+                <div class="flexColumn flexBottom flexLeft p-32px h-100%">
+                    <h1 class="fs-48px">Third slide header</h1>
+                    <p class="loremIpsum-8 fs-18px o-.8"></p>
+                    <div class="flexRow g-12px mb-22px">
+                        <button class="fs-18px" onclick="href('#')">Primary button</button>
+                        <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Left-aligned hero -->
+    <div class="w-100% p-86px-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexColumn ta-center flexCenter flexMiddle g-32px max1200:flexDirection-row min1200:flexDirection-column ta-left">
+            <div>
+                <h1 class="fs-48px">Left-aligned hero</h1>
+                <p class="loremIpsum-4 fs-18px o-.8"></p>
+                <div class="flexRow g-12px mb-22px">
+                    <button class="fs-18px" onclick="href('#')">Primary button</button>
+                    <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+                </div>    
+            </div>
+            <img class="w-600px br-6px shadow" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+        </div>
+    </div>    
+
+    <!-- Right-aligned hero -->
+    <div class="w-100% p-86px-32px shadow bg-white dark:bg-black15">
+        <div class="auto-width flexColumn ta-center flexCenter flexMiddle g-32px max1200:flexDirection-row min1200:flexDirection-column ta-right">
+            <img class="w-600px br-6px shadow" src="https://raw.githubusercontent.com/Pixelbite-CSS/.github/main/thumbnail_1x.png"/>
+            <div>
+                <h1 class="fs-48px">Right-aligned hero</h1>
+                <p class="loremIpsum-4 fs-18px o-.8"></p>
+                <div class="flexRow flexBottom g-12px mb-22px">
+                    <button class="fs-18px" onclick="href('#')">Primary button</button>
+                    <button class="fs-18px bg-secondary" onclick="href('#')">Secondary</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <button onclick="changeTheme()" class="br-5000px ar-1/1 flex flexCenter flexMiddle fs-20px fixed top-auto left-auto bottom-20px right-20px"><i class="fa-solid fa-circle-half-stroke"></i></button>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/1.6/pixelbite-min.js"></script> 
+</body>
+</html>
