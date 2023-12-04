@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modals | PixelbiteCSS</title>
+    <link rel="stylesheet" href="https://pixelbite-css.github.io/pixelbite-css/style/1.6/pixelbite-min.css">
+</head>
+<body class="bg-white95 dark:bg-black10 c-black dark:c-white flex flexWrap-wrap g-32px">
+    
+    <!-- Classic modal -->
+    <div class="w-100% shadow bg-white dark:bg-black15">
+        <div class="w-100% h-100% bg-rgba(128,128,128,.5) p-64px flex flexCenter flexMiddle g-12px">
+            <div class="p-18px-24px bg-white dark:bg-black10 w-420px shadow br-12px flexColumn flexLeft">
+                <div class="fs-22px fw-500">Modal title</div>
+                <p class="loremIpsum-4"></p>
+                <button onclick="href('#')" class="w-100% mb-8px">Primary button</button>
+                <button onclick="href('#')" class="w-100% bg-secondary">Secondary button</button>
+                <button onclick="href('#')" class="close-x"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selection modal -->
+    <div class="w-100% shadow bg-white dark:bg-black15">
+        <div class="w-100% h-100% bg-rgba(128,128,128,.5) p-64px flex flexCenter flexMiddle g-12px">
+            <div class="bg-white dark:bg-black10 w-420px shadow br-12px flexColumn flexLeft">
+                <div class="p-32px ta-center">
+                    <div class="fs-22px fw-500">Modal title</div>
+                    <div class="loremIpsum-2"></div>
+                </div>
+                <div class="w-100% flexRow">
+                    <button onclick="href('#')" class="br-0 w-50% bg-transparent c-primary fs-16px fw-800 btop-1px-solid-rgba(128,128,128,.3)">Continue</button>
+                    <button onclick="href('#')" class="br-0 w-50% bg-transparent c-primary fs-16px btop-1px-solid-rgba(128,128,128,.3) bleft-1px-solid-rgba(128,128,128,.3)">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icons modal -->
+    <div class="w-100% shadow bg-white dark:bg-black15">
+        <div class="w-100% h-100% bg-rgba(128,128,128,.5) p-64px flex flexCenter flexMiddle g-12px">
+            <div class="p-42px-52px bg-white dark:bg-black10 w-420px shadow br-12px flexColumn flexLeft g-22px">
+                <h3>Modal title</h3>
+                <div class="flex flexRow flexLeft flexTop g-12px">
+                    <i class="fa-solid fa-icons fs-54px c-white40 dark:c-white60"></i>
+                    <div>
+                        <div class="fw-500 fs-18px">Icon title</div>
+                        <div class="loremIpsum-1 fs-14px"></div>
+                    </div>
+                </div>
+                <div class="flex flexRow flexLeft flexTop g-12px">
+                    <i class="fa-solid fa-newspaper fs-54px c-red40 dark:c-red60"></i>
+                    <div>
+                        <div class="fw-500 fs-18px">Icon title</div>
+                        <div class="loremIpsum-1 fs-14px"></div>
+                    </div>
+                </div>
+                <div class="flex flexRow flexLeft flexTop g-12px">
+                    <i class="fa-solid fa-circle-question fs-54px c-blue40 dark:c-blue60"></i>
+                    <div>
+                        <div class="fw-500 fs-18px">Icon title</div>
+                        <div class="loremIpsum-1 fs-14px"></div>
+                    </div>
+                </div>
+                <button onclick="href('#')" class="w-100% fs-18px">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign up modal -->
+    <div class="w-100% shadow bg-white dark:bg-black15">
+        <div class="w-100% h-100% bg-rgba(128,128,128,.5) p-64px flex flexCenter flexMiddle g-12px">
+            <div class="p-42px-52px bg-white dark:bg-black10 w-420px shadow br-12px flexColumn flexLeft g-22px">
+                <h3>Sign up for free</h3>
+                <div class="floatInput">
+                    <input id="input1" type="email" class="w-100% br-6px bg-white dark:bg-black10 c-black dark:c-white"/>
+                    <label for="input1">Email address</label>
+                </div>
+                <div class="floatInput">
+                    <input id="input2" type="password" class="w-100% br-6px bg-white dark:bg-black10 c-black dark:c-white"/>
+                    <label for="input2">Password</label>
+                </div>
+                <button onclick="href('#')" class="w-100% fs-22px">Sign up</button>
+                <div class="o-.6 fs-12px loremIpsum-2">By clicking Sign up, you agree to the terms of use</div>
+                <div class="flex flexColumn w-100% g-8px flexLeft">
+                    <h4>Or use a third-party</h4>
+                    <button class="w-100% bg-transparent c-black20 b-1px-solid-black20 dark:c-white dark:b-1px-solid-white">Sign up with Github <i class="fa-brands fa-github"></i></button>
+                    <button class="w-100% bg-transparent c-blue70 b-1px-solid-blue70">Sign up with Facebook <i class="fa-brands fa-facebook"></i></button>
+                </div>
+                <button onclick="href('#')" class="close-x"></button>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="changeTheme()" class="br-5000px ar-1/1 flex flexCenter flexMiddle fs-20px fixed top-auto left-auto bottom-20px right-20px"><i class="fa-solid fa-circle-half-stroke"></i></button>
+<script src="https://pixelbite-css.github.io/pixelbite-css/script/1.6/pixelbite-min.js"></script> 
+</body>
+</html>
