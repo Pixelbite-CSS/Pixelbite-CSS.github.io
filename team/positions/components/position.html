@@ -1,0 +1,32 @@
+<div class="bg-rgba(128,128,128,.0) b-1px-solid-rgba(128,128,128,.2) dark:bg-cherry7 dark:b-1px-solid-cherry30 w-100% p-24px-32px br-8px">
+    <h3 class="w-100%"><i class="${icon} c-cherry50"></i> ${name}</h3>
+    <div class="${id} mt-18px mb-18px flexColumn flexLeft w-100%">        
+        <b>Position Overview:</b> ${about}
+        <div><a class="pointer" onclick="toggleElement('${id}')">- show more</a></div>
+    </div>
+    <div class="${id} hidden flexColumn g-14px mt-18px mb-18px w-100%">
+        <div class="flexColumn g-14px">
+            <div class="w-100%">
+                <b>Position Overview:</b>
+                <ul>
+                    ${overview}
+                </ul>
+            </div>
+            <div class="w-100%">
+                <b>Responsibilities:</b>
+                <ul>
+                    ${responsibilities}
+                </ul>
+            </div>
+            <div class="w-100%">
+                <b>Requirements:</b>
+                <ul>
+                    ${requirements}
+                </ul>
+            </div>
+        </div>
+        <div><a class="pointer" onclick="toggleElement('${id}')">hide</a></div>
+    </div>
+    <button class="b-2px-solid-primary c-white dark:c-black" onclick="href('mailto:${mailto}?subject=${name} Applications&body=\'Please include Github and Linkedin account in the applications\'', true)">Apply</button>
+    <button class="c-cherry50 bg-transparent b-2px-solid-primary dark:c-white dark:b-2px-solid-white" onclick="href('mailto:${mailto}?subject=Request: ${name}&body=I would like to know more about this position at PixelbiteCSS!', true)">Contact for more info</button>
+</div>
