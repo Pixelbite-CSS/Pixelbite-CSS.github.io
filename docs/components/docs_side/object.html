@@ -1,0 +1,45 @@
+<div class="w-200px p-12px flexColumn flexLeft g-6px pos-relative">
+    ${`
+        let stringBuilder = ''
+        let object = ${object}
+
+        for (let i = 0; i < object.length; i++) {
+            switch (i) {
+                case 0:
+                    stringBuilder += "<component path='./docs_side_category.html' icon='fas fa-house' category='Introduction'></component>"
+                    break
+                case 1:
+                    stringBuilder += "<component path='./docs_side_category.html' icon='fab fa-css3' category='Classes'></component>"
+                    break
+                case 2:
+                    stringBuilder += "<component path='./docs_side_category.html' icon='fas fa-star' category='Components'></component>"
+                    break
+                case 3:
+                    stringBuilder += "<component path='./docs_side_category.html' icon='fas fa-percent' category='Prefixes'></component>"
+                    break
+                case 4:
+                    stringBuilder += "<component path='./docs_side_category.html' icon='fas fa-paintbrush' category='Customization'></component>"
+                    break
+            }
+            for (let j = 0; j < object[i].length; j++) {
+                let name = object[i][j].id.replaceAll('_',' ').replaceAll('.md','')
+                let parts = name.split(' ')
+                let category = parseInt(parts[0])
+                let string = parts.slice(2).join(' ')
+                let nameLink = object[i][j].id.replaceAll('.md','')
+                let version = "${v}"
+                let language = "${lang}"
+
+                let tag = ''
+                let tagMatch = name.match(/\[(.*?)\]/)
+                if (tagMatch) {
+                    tag = tagMatch[1]
+                    name = name.replace(tagMatch[0], '').trim()
+                }
+                stringBuilder += "<component path='./docs_side_block.html' class='w-100%' link='?doc=" + nameLink + "&v=" + version + "&lang=" + language + "' tag='" + tag + "' name='" + string +"'></component><br>"
+            }
+        }
+
+        return stringBuilder
+    `}
+</div>

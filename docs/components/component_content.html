@@ -1,0 +1,20 @@
+<component class="w-100% p-12px-22px" markdown='github' path="     
+${`
+    let path = pixelbite.query.path || ""
+    let version = pixelbite.query.v || pixelbite.version
+    let language = pixelbite.query.lang || "English"
+    let document = pixelbite.query.doc + '.md' || ''
+    let firstUrl = "https://pixelbite-css.github.io/docs-repo/"
+    // let firstUrl = "https://cdn.jsdelivr.net/gh/Pixelbite-CSS/docs-repo@master/"
+    let url = firstUrl + version + "/" + language + "/" + document
+    if (path) {
+        return path
+    } else {
+        if (urlExists(url)) {
+            return url
+        } else {
+            return "."
+        }
+    }
+`}
+"></component>
